@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hWb-Tt-Ijd">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kj-h3-O6G">
+                                <rect key="frame" x="133" y="273.5" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fz-HH-vKP">
+                                <rect key="frame" x="137" y="302.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onTapTravelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jgX-zf-GKM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llC-ta-67q">
+                                <rect key="frame" x="113" y="340.5" width="94" height="30"/>
+                                <state key="normal" title="go to america"/>
+                                <connections>
+                                    <action selector="onTapAmricaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ia3-oi-CcA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHk-2v-kYr">
+                                <rect key="frame" x="113" y="149" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="iAh-DG-33G" kind="show" id="9lA-b6-PDn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="llC-ta-67q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ct-VQ-wQg"/>
+                            <constraint firstItem="3Fz-HH-vKP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JWC-oQ-jtD"/>
+                            <constraint firstItem="5Kj-h3-O6G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XhP-TZ-Apb"/>
+                            <constraint firstItem="5Kj-h3-O6G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fav-Yc-6Ds"/>
+                            <constraint firstItem="llC-ta-67q" firstAttribute="top" secondItem="3Fz-HH-vKP" secondAttribute="bottom" constant="8" id="fu9-sH-d7Q"/>
+                            <constraint firstItem="3Fz-HH-vKP" firstAttribute="top" secondItem="5Kj-h3-O6G" secondAttribute="bottom" constant="8" id="p3p-JC-qSQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="T1b-lC-82w"/>
+                    <connections>
+                        <outlet property="travelButton" destination="3Fz-HH-vKP" id="8ZU-6V-CIB"/>
+                        <outlet property="travelLabel" destination="5Kj-h3-O6G" id="b8T-8R-JjI"/>
+                        <segue destination="Ryb-r7-NUP" kind="show" identifier="america" id="bKe-dO-jgc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--America View Controller-->
+        <scene sceneID="pcP-3v-G0u">
+            <objects>
+                <viewController id="Ryb-r7-NUP" customClass="AmericaViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ElS-4y-2c6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIh-Vb-d8H">
+                                <rect key="frame" x="143" y="273.5" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RIh-Vb-d8H" firstAttribute="centerX" secondItem="ElS-4y-2c6" secondAttribute="centerX" id="6YE-B8-Y3K"/>
+                            <constraint firstItem="RIh-Vb-d8H" firstAttribute="centerY" secondItem="ElS-4y-2c6" secondAttribute="centerY" id="I02-3G-uyN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pgO-Ya-eFz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hPT-MS-bPZ"/>
+                    <connections>
+                        <outlet property="usaLbale" destination="RIh-Vb-d8H" id="4Sf-tQ-dIA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUG-bB-Wrx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784.057971014493" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Elt-ed-Ixf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hWb-Tt-Ijd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yaj-6D-iAv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7yF-qn-vXU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NSq-Xv-Kha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Country View Controller-->
+        <scene sceneID="e5j-Kw-ONP">
+            <objects>
+                <viewController id="iAh-DG-33G" customClass="CountryViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3oz-0e-HLJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ov6-EW-dZH">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryCell" textLabel="FSH-Jw-4Jn" style="IBUITableViewCellStyleDefault" id="FOh-bJ-AGo" customClass="CountryCell" customModule="Travel" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FOh-bJ-AGo" id="BEV-dD-1D2">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FSH-Jw-4Jn">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ov6-EW-dZH" firstAttribute="top" secondItem="A7H-51-5MT" secondAttribute="top" id="a8K-yL-zcr"/>
+                            <constraint firstItem="A7H-51-5MT" firstAttribute="trailing" secondItem="ov6-EW-dZH" secondAttribute="trailing" id="eIl-Ya-xoG"/>
+                            <constraint firstItem="ov6-EW-dZH" firstAttribute="leading" secondItem="A7H-51-5MT" secondAttribute="leading" id="h8k-EM-lTm"/>
+                            <constraint firstItem="A7H-51-5MT" firstAttribute="bottom" secondItem="ov6-EW-dZH" secondAttribute="bottom" id="sVY-Vi-wBI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A7H-51-5MT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qq7-vq-x1B"/>
+                    <connections>
+                        <outlet property="tableView" destination="ov6-EW-dZH" id="Jgg-dH-JkX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpl-Cb-4BO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1704" y="881"/>
+        </scene>
+    </scenes>
+</document>
